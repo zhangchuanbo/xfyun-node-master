@@ -1,0 +1,9 @@
+.github/
+build/
+test/
+.eslintrc.json
+.vscode
+node_modules/
+msc/
+package-lock.json
+yarn.lock
