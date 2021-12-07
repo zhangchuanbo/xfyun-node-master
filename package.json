@@ -7,21 +7,28 @@
     "import": "./lib/esm.js",
     "require": "./lib/index.js"
   },
-  "directories": {
-    "test": "test"
+  "engines": {
+    "node": ">=10.0"
   },
   "scripts": {
     "build": "node-gyp rebuild",
     "clean": "node-gyp clean",
-    "lint": "npx eslint --ignore-path .gitignore ./**/*.{js}",
-    "test": "node ./test/test.js"
+    "lint": "npx eslint --ignore-path .gitignore ./**/*.{js}"
   },
-  "gypfile": true,
   "author": {
     "name": "chuanbozhang",
     "email": "zcb_melody@163.com"
   },
+  "gypfile": true,
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangchuanbo/xfyun-node-tts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhangchuanbo/xfyun-node-tts/issues"
+  },
+  "homepage": "https://github.com/zhangchuanbo/xfyun-node-tts#readme",
   "devDependencies": {
     "eslint": "^7.30.0",
     "node-gyp": "^5.1.0"
