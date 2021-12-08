@@ -4,4 +4,5 @@ node_modules/
 *.swp
 !src/sdk/bin/msc/msc.cfg
 src/sdk/bin/msc/
-msc/
+.vscode/
+.github/
