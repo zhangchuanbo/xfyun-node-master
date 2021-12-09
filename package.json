@@ -1,6 +1,6 @@
 {
   "name": "xfyun-node-tts",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "xfyun nodejs client.",
   "main": "./lib/index.js",
   "exports": {
