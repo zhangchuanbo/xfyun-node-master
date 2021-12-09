@@ -4,16 +4,13 @@
             "target_name": "tts",
             "sources": ["lib/src/tts.cpp"],
             "cflags_cc!": [ "-fno-exceptions" ],
-            "msvs_settings": {
-                "VCCLCompilerTool": {
-                    "ExceptionHandling": 1,
-                    "AdditionalOptions": []
-                }
-            },
+            "cflags!": ["-fno-exceptions" ],
             'conditions': [
                 ['OS=="linux"', {
-                    "cflags!": [ "-g", "-Wall", "-Ilib/src/sdk/include","-fno-exceptions" ],
-                    "libraries": ["/usr/local/lib/libmsc.so"],
+                     "libraries": ["<(module_root_dir)/lib/src/sdk/libs/x64/libmsc.so"],
+                     "include_dirs": [
+                        "lib/src/sdk/include/linux",
+                    ],
                 }],
                 ['OS=="win"', {
                     'copies':[
@@ -22,13 +19,18 @@
                         },
                     ],
                     "include_dirs": [
+                        "lib/src/sdk/include/win",
                         "lib/src/sdk/libs",
                     ],
-                    "cflags!": [ "-g", "-Wall", "-Ilib/src/sdk/libs","-fno-exceptions" ],
+                    "msvs_settings": {
+                        "VCCLCompilerTool": {
+                            "ExceptionHandling": 1,
+                            "AdditionalOptions": []
+                        }
+                    },
                 }],
             ],
             "include_dirs": [
-                "lib/src/sdk/include",
                 "<!@(node -p \"require('node-addon-api').include\")"
             ],
             'dependencies': [
