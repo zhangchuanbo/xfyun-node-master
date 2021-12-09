@@ -4,3 +4,5 @@ node_modules/
 *.swp
 !src/sdk/bin/msc/msc.cfg
 .vscode/
+*.wav
+package-lock.json
