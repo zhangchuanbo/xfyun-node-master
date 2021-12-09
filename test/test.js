@@ -1,7 +1,7 @@
-const tts = require('../lib/index.js');
+const tts =  require('../lib/index.js');
 
-const loginInfo = tts.login("4beb12d6");
+const loginInfo = tts.login("591d86fc");
 console.log(loginInfo);
 
-const speakInfo = tts.speak({ text: "hello", filename: "sample.wav" })
+const speakInfo = tts.speak({text:"hello",filename:"sample.wav"})
 console.log(speakInfo);

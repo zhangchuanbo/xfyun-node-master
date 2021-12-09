@@ -3,7 +3,4 @@ node_modules/
 *.swo
 *.swp
 !src/sdk/bin/msc/msc.cfg
-src/sdk/bin/msc/
 .vscode/
-.github/
-package-lock.json
